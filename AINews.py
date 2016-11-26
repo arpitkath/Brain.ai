@@ -10,7 +10,7 @@ class NewsResponse:
     def can_response(self, **kwargs):
 
         tags       = kwargs.get('tags')
-        plain_text = kwargs.get('plain_text').split()
+        plain_text = kwargs.get('plain_text').lower().split()
 
         check      = [('news', 'JJ'),
                        ('news', 'NN')
