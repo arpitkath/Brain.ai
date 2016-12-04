@@ -34,7 +34,7 @@ queries related to gmail and facebook.
 <p>
 The assistant takes voice as input and
 convert it to text and send the raw text
-to server.
+to server.(The voice input and voice to text is done on android using Google API and sent to the pthon server using socket used in brain_server.py)
 </p>
 <p>
 The server uses some Natural
