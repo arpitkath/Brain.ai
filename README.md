@@ -6,11 +6,7 @@ basically a voice assistant which would
 help the user to provide answer to his
 question. All the data would be send to
 our server which would respond to the
-given queries by using algorithms. It can
-perform various mathematical
-calculations, recommend you a movie,
-give answer to time related queries and
-queries related to gmail and facebook.
+given queries by using algorithms.
 </p>
 <h3>Features:</h3>
 <ul>
