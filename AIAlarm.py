@@ -10,7 +10,7 @@ class AlarmResponse:
     def can_response(self, **kwargs):
 
         tags = kwargs.get('tags')
-        plain_text = kwargs.get('plain_text').split()
+        plain_text = kwargs.get('plain_text').lower().split()
 
         check = [("alarm", "NN"),
                  ("alarm", "JJ")
@@ -24,7 +24,7 @@ class AlarmResponse:
 
     def respond(self, **kwargs):
 
-        plain_text = kwargs.get('plain_text')
+        plain_text = kwargs.get('plain_text').lower()
         _time = []
 
         for word in plain_text.split():
@@ -33,7 +33,6 @@ class AlarmResponse:
                 _time.append(word)
             except:
                 pass
-
         if len(_time) == 0:
             return "Oops! .. Having some problem!"
 
@@ -47,12 +46,12 @@ class AlarmResponse:
             _time -= int(datetime.now().strftime("%s"))
         except:
             return "Oops! .. Having some problem!"
-
+        print _time
         if "tomorrow" in plain_text.split():
             _time += int(24 * 60 * 60)
 
         if _time <= 0:
-            return "I do not have time machine..:P"
+            return "Oops! .. Having some problem!"
         return "alarm " + str(_time)
 
 '''
@@ -60,7 +59,7 @@ class AlarmResponse:
 import nltk
 from nltk.tag.perceptron import PerceptronTagger
 
-sentence = "create an alarm for wednesday 5:45 pm"
+sentence = "set alarm after 1 hour"
 print(sentence)
 text_input = sentence.lower()
 #print(text_input)
