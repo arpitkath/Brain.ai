@@ -11,7 +11,7 @@ class ConversionResponse:
     def can_response(self, **kwargs):
 
         tags = kwargs.get('tags')
-        plain_text = kwargs.get('plain_text')
+        plain_text = kwargs.get('plain_text').lower()
 
         check = [('convert', 'VB'),
                  ('convert', 'NN'),
@@ -31,7 +31,7 @@ class ConversionResponse:
 
     def respond(self, **kwargs):
 
-        plain_text = kwargs.get('plain_text')
+        plain_text = kwargs.get('plain_text').lower()
         service    = ConversionService()
         units      = service.extractUnits(plain_text)
 
