@@ -14,8 +14,8 @@ def clean_query(s):
 	return s
 
 HOST = "192.168.43.46"
-print HOST
-PORT = 8007 #open port 7000 for connection
+PORT = 8006 #open port 7000 for connection
+print HOST, PORT
 s = socket(AF_INET, SOCK_STREAM)
 s.bind((HOST, PORT))
 s.listen(99999999) #how many connections can it receive at one time
