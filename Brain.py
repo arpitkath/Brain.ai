@@ -32,7 +32,7 @@ class Brain:
     def response(self, plain_text):
         #tokens = lemmatize(plain_text)
         tokens     = plain_text.lower().split()
-        plain_text = " ".join(tokens)
+        #plain_text = " ".join(tokens)
         tags       = nltk.tag._pos_tag(tokens, None, tagger=self.tagger)
         for ai in self.ai:
             if ai.can_response(tags=tags, plain_text=plain_text):
