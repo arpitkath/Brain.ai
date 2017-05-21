@@ -9,7 +9,7 @@ class SummarizerResponse:
     def can_response(self, **kwargs):
 
         tags       = kwargs.get('tags')
-        plain_text = kwargs.get('plain_text').split()
+        plain_text = kwargs.get('plain_text').lower().split()
 
         check      = [('what', 'WP'),
                      ('when', 'WRB'),
@@ -20,7 +20,8 @@ class SummarizerResponse:
                      ('summarize', 'VB'),
                      ('summarize', "NN"),
                      ('how', 'WRB'),
-                     ('which', 'WDT')
+                     ('which', 'WDT'),
+                     ('why', 'WRB')
                      ]
 
         for tag in tags:
@@ -31,7 +32,7 @@ class SummarizerResponse:
 
     def respond(self, **kwargs):
 
-        plain_text = kwargs.get('plain_text')
+        plain_text = kwargs.get('plain_text').lower()
 
         try:
             for i in range(5):
@@ -51,7 +52,7 @@ class SummarizerResponse:
 import nltk
 from nltk.tag.perceptron import PerceptronTagger
 
-sentence = "which"
+sentence = raw_input()
 print(sentence)
 text_input = sentence.lower()
 #print(text_input)
