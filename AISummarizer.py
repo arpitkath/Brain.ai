@@ -7,29 +7,8 @@ class SummarizerResponse:
         pass
 
     def can_response(self, **kwargs):
-
-        tags       = kwargs.get('tags')
-        plain_text = kwargs.get('plain_text').lower().split()
-
-        check      = [('what', 'WP'),
-                     ('when', 'WRB'),
-                     ('what', 'WDT'),
-                     ('who', 'WP'),
-                     ('search', 'NN'),
-                     ('summary', 'NN'),
-                     ('summarize', 'VB'),
-                     ('summarize', "NN"),
-                     ('how', 'WRB'),
-                     ('which', 'WDT'),
-                     ('why', 'WRB')
-                     ]
-
-        for tag in tags:
-            if tag in check:
-                return True
-
-        return False
-
+        # Always return something, maybe useful 
+        return True
     def respond(self, **kwargs):
 
         plain_text = kwargs.get('plain_text').lower()

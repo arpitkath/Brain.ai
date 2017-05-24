@@ -9,22 +9,15 @@ class AlarmResponse:
 
     def can_response(self, **kwargs):
 
-        tags = kwargs.get('tags')
-        plain_text = kwargs.get('plain_text').lower().split()
-
-        check = [("alarm", "NN"),
-                 ("alarm", "JJ")
-                 ]
-
-        for tag in tags:
-            if tag in check and ("create" in plain_text or "set" in plain_text):
-                return True
-
-        return False
+        return True
 
     def respond(self, **kwargs):
 
         plain_text = kwargs.get('plain_text').lower()
+        if 'an' in plain_text.split():
+            plain_text = plain_text.split()
+            plain_text[plain_text.index('an')] = '1'
+            plain_text = " ".join(plain_text)
         _time = []
 
         for word in plain_text.split():
@@ -34,7 +27,7 @@ class AlarmResponse:
             except:
                 pass
         if len(_time) == 0:
-            return "Oops! .. Having some problem!"
+            return "Having some problem!"
 
         _time = " ".join(_time)
 
@@ -45,13 +38,13 @@ class AlarmResponse:
             _time = int(parser.parse(_time).strftime("%s"))
             _time -= int(datetime.now().strftime("%s"))
         except:
-            return "Oops! .. Having some problem!"
+            return "Having some problem!"
         print _time
         if "tomorrow" in plain_text.split():
             _time += int(24 * 60 * 60)
 
         if _time <= 0:
-            return "Oops! .. Having some problem!"
+            return "Having some problem!"
         return "alarm " + str(_time)
 
 '''
