@@ -24,13 +24,13 @@ class MapsResponse:
         parsed = self.parser(plain_text).ents
         location = ""
         if len(parsed) == 1:
-            location = "map2 "
+            location = "map1 "
             place = str(parsed[0]).lower()
             if len(place.split()) == 2:
                 place = "_".join(str(i) for i in place.split())
             location += place
         elif len(parsed) == 2:
-            location = "map3 "
+            location = "map2 "
             place_1 = str(parsed[0]).lower()
             place_2 = str(parsed[1]).lower()
             if len(place_1.split()) == 2:
