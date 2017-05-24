@@ -31,6 +31,7 @@ given queries by using algorithms.
 The assistant takes voice as input and
 convert it to text and send the raw text
 to server.(The voice input and voice to text is done on android using Google API and sent to the python server using socket used in brain_server.py)
+The server first pre processes the text for classification, i.e which module to run using ensemble of NaiveBayes, Linear SVM and Perceptron using voting.
 </p>
 <p>
 The server uses some Natural
@@ -38,7 +39,8 @@ Language Processing tools such as
 POS tagging, Named Entity
 recognition to do semantic analysis of
 the text and determines which module
-will reply and what to reply
+will reply and what to reply.
+It can also remember it's past conversation and relate it to new queries like "Who's Bill Gates", "Who's is his wife" do it will get the results of "Bill Gate's wife".
 </p>
 <h3>
 Requirements:
