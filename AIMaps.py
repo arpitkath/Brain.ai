@@ -39,7 +39,7 @@ class MapsResponse:
                 place_2 = "_".join(str(i) for i in place_2).split()
             location += place_1 + " " + place_2
         else:
-            return "Oops! .. Having some problem!"
+            return "Something Wrong!"
 
         return location
 
