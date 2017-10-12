@@ -36,7 +36,7 @@ class MapsResponse:
             if len(place_1.split()) == 2:
                 place_1 = "_".join(str(i) for i in place_1.split())
             if len(place_2.split()) == 2:
-                place_2 = "_".join(str(i) for i in place_2).split()
+                place_2 = "_".join(str(i) for i in place_2.split())
             location += place_1 + " " + place_2
         else:
             return "Something Wrong!"
