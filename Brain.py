@@ -45,6 +45,10 @@ class Brain:
 
 	def response(self, plain_text):
 		plain_text = plain_text.split()
+		if "open camera" == " ".join(plain_text):
+			return " ".join(plain_text)
+		if "call" in plain_text:
+			return " ".join(plain_text)
 		for ents in self.special_tags:
 			for tag in self.special_tags[ents]:
 				if tag in plain_text and self.previous_ents[ents] != "":
@@ -63,8 +67,9 @@ class Brain:
 		tags       = nltk.tag._pos_tag(tokens, None, tagger=self.tagger)
 		modules    = ModuleSelection(plain_text, self.lemmatizer, STOP_WORDS, self.parser, self.conversion, self.classifiers).get_modules()
 		for module in modules:
-			if self.ai[module].can_response(tags=tags, plain_text=plain_text):
-				return self.ai[module].respond(tags=tags, plain_text=plain_text)
+			if module in self.ai:
+				if self.ai[module].can_response(tags=tags, plain_text=plain_text):
+					return self.ai[module].respond(tags=tags, plain_text=plain_text)
 		return "Something Wrong!"
 
 
