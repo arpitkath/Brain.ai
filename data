@@ -1,0 +1,96 @@
+QUERY,API
+set an alarm for 5 P.M,alarm_api
+set an alarm for 8 a.m,alarm_api
+wake me up at 8 A.M,alarm_api
+remind me when it is 6 p.m,alarm_api
+add a alarm after 10 minutes,alarm_api
+set alarm for 6:30 P.M,alarm_api
+wake up at 6 A.M,alarm_api
+can you please wake me up at 6 A.M,alarm_api
+add alarm for 6:30 A.M,alarm_api
+set alarm in 15 minutes,alarm_api
+wake me up in 30 minutes,alarm_api
+set alarm after an hour,alarm_api
+create alarm for 6 A.M,alarm_api
+create an alarm for 6 A.M,alarm_api
+where am I ?,maps_api
+Find a cafe near me,maps_api
+Find a restaurant near me,maps_api
+Find some pizza places in Patiala,maps_api
+where's a good hair salon?,maps_api
+how long will it take to go Domino's,maps_api
+how far is GPE,maps_api
+where is GPE,maps_api
+how to reach GPE,maps_api
+show me how to get fom Patiala to Ludhiana,maps_api
+show me restaurants near Patiala,maps_api
+how do I get to GPE,maps_api
+show me the directions to Patiala,maps_api
+show me nearby Domino's,maps_api
+take me to Patiala,maps_api
+how to reach from Patiala to Ludhiana,maps_api
+give me the best way to reach Patiala,maps_api
+how long it would take to reach Patiala from Ludhiana,maps_api
+Best way to go GPE from here,maps_api
+what is the best route to GPE,maps_api
+show me some latest news,news
+what is trending today,news
+what's the weather,weather
+how hot is it outside,weather
+what's the weather today,weather
+will it rain today,weather
+will I need an umbrella today,weather
+is it windy outside,weather
+how tall is eiffel tower,summarization
+how far away is mars,summarization
+show me today's headlines,news
+tell me something about Kalpana Chawla,summarization
+what is the capital of India,summarization
+what are the best tourist places in Chandigarh,summarization
+who is Bill Gates,summarization
+I need some information about recent happenings around me,news
+give me your opinions about android,summarization
+give me a list of top rated comedy movies,summarization
+who is the richest man in the world,summarization
+I want to know what's happening around me,news
+is it true that we use only 10% of our brain,summarization
+do you believe in theory of evolution,summarization
+how to prepare for an interview,summarization
+how to cook mexican rice,summarization
+what's new today,news
+what's the difference between rat and mouse,summarization
+how old is Bill Gates,summarization
+what to do when dog bites,summarization
+which is the hottest planet,summarization
+which is the smallest county in the world,summarization
+how to make a cake,summarization
+what's the latest version of Android,summarization
+why do stars twinkle,summarization
+what's the ideal time to sleep,summarization
+tell me something interesting about today,news
+how to earn money online,summarization
+which is better tea or coffee,summarization
+what are the symptoms of cancer,summarization
+tell me some facts,summarization
+did man really land on the moon,summarization
+how could you tell if gold is real,summarization
+how can I improve my English,summarization
+which is the most beautiful city in the world,summarization
+what is the distance between Sydney and Melbourne,summarization
+how fast is the speed of sound,summarization
+is time travel really possible,summarization
+how to play guitar,summarization
+who was the first president of India,summarization
+should I carry umbrella with me,weather
+how hot is it today,weather
+what are the latest announcements today,news
+update me about the recent events around me,news
+give me the weather report,weather
+how hot is the sun,summarization
+what to eat before gym,summarization
+convert 5 miles in km,unit_conversion
+convert kilometer into miles,unit_conversion
+what is 5 km in miles,unit_conversion
+how many kilogram make up 5 grams,unit_conversion
+how much km make up 5 miles,unit_conversion
+what is 3 kg in pounds equal to,unit_conversion

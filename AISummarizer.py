@@ -1,5 +1,5 @@
 import duckduckgo
-
+import re
 
 class SummarizerResponse:
 
@@ -18,6 +18,7 @@ class SummarizerResponse:
                 print "Attempt #%d"%(i + 1)
                 try:
                     result = str(duckduckgo.get_zci(plain_text))#.split()
+                    result = re.sub("\(https?.*\)", "", result)
                     return result
                 except:
                     pass

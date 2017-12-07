@@ -29,8 +29,11 @@ class MapsResponse:
             if len(place.split()) == 2:
                 place = "_".join(str(i) for i in place.split())
             location += place
+            return location
+        return "Something wrong!"
+'''
         elif len(parsed) == 2:
-            location = "map3 "
+            location = "map1 "
             place_1 = str(parsed[0]).lower()
             place_2 = str(parsed[1]).lower()
             if len(place_1.split()) == 2:
@@ -38,10 +41,12 @@ class MapsResponse:
             if len(place_2.split()) == 2:
                 place_2 = "_".join(str(i) for i in place_2.split())
             location += place_1 + " " + place_2
+    
         else:
             return "Something Wrong!"
 
         return location
+'''
 
 
 '''

@@ -14,15 +14,15 @@ def clean_query(s):
 	return s
 
 HOST = "192.168.43.46"
-PORT = 8004 #open port 7000 for connection
+PORT = 8002 #open port 7000 for connection
 print HOST, PORT
+brain = Brain()
+print "Ready!"
 s = socket(AF_INET, SOCK_STREAM)
 s.bind((HOST, PORT))
 s.listen(99999999) #how many connections can it receive at one time
 conn, addr = s.accept() #accept the connection
 print "Connected by: " , addr #print the address of the person connected
-brain = Brain()
-print "Ready!"
 while True:
     query = conn.recv(1024) #how many bytes of data will the server receive
     query = clean_query(query)
